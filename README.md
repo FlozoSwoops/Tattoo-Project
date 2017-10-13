@@ -2,15 +2,15 @@
 
 ERD:
 
-User
+Artist/user
 name:
 age:
 location
  |
  |
  |
- |
-Artist
+/|
+Style
 name:
 style:
 Years working:
@@ -27,3 +27,10 @@ number sessions:
 hours:
 color:
 rating:
+
+Wireframe
+https://gomockingbird.com/projects/585q5mg/4gXVnC
+
+Trello
+https://trello.com/b/ofwD8gAE/tattoo-project
+
