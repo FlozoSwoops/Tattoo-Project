@@ -5,6 +5,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
+const ArtistController = require('./routes/ArtistController')
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true});
 
@@ -12,6 +13,9 @@ const connection = mongoose.connection;
 connection.on('connected', () => {
   console.log('Mongoose Connected Successfully');    
 }); 
+
+//controllers
+
 
 app.use(express.static(__dirname + '/client/build/'));
 

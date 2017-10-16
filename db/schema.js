@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema= mongoose.Schema
 
-const userSchema = new Schema ({
+const userSchema =  Schema ({
     name:{
         type: String,
         required: true,
@@ -20,7 +20,7 @@ const userSchema = new Schema ({
     }
 })
 
-const artSchema = new Schema({
+const artSchema =  Schema({
     style:{
         type: String,
         required: true,
@@ -39,11 +39,11 @@ const artSchema = new Schema({
     },
     description:{
         type: String,
-        required: true
+        required: false
     }
 })
 
-const artistSchema = new Schema({
+const artistSchema =  Schema({
     name:{
         type: String,
         Required: false
@@ -60,14 +60,12 @@ const artistSchema = new Schema({
         type: Number,
         required: true
     },
-    art: [artSchema]
+    artwork: [artSchema]
 })
 
-const UserModel = mongoose.model('user', userSchema)
+const UserModel = mongoose.model('User', userSchema)
 const ArtistModel = mongoose.model('Artist', artistSchema)
 const ArtModel = mongoose.model('Art', artSchema)
 module.exports = {
-    UserModel,
-    ArtistModel,
-    ArtModel
+    UserModel, ArtistModel, ArtModel
 }
