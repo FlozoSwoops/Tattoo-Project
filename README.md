@@ -2,20 +2,22 @@
 
 ERD:
 
-Artist/user
+user
 name:
 age:
-location
- |
- |
- |
-/|
-Style
-name:
-style:
-Years working:
 location:
-price per hour:
+Number of Tattoos
+ |
+ |
+ |
+ |
+Artist
+name:
+awards:
+age:
+location:
+Years working:
+
  |
  |
  |
@@ -26,11 +28,15 @@ time:
 number sessions:
 hours:
 color:
-rating:
+likes:
+dislikes:
 
 Wireframe
 https://gomockingbird.com/projects/585q5mg/4gXVnC
 
 Trello
 https://trello.com/b/ofwD8gAE/tattoo-project
+
+Heroku 
+https://damp-spire-92814.herokuapp.com/
 
