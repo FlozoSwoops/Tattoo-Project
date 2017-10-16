@@ -16,6 +16,8 @@ connection.on('connected', () => {
 
 //controllers
 
+app.use('/api/artists', ArtistController)
+
 
 app.use(express.static(__dirname + '/client/build/'));
 
