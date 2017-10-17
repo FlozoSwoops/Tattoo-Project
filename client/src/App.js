@@ -12,13 +12,13 @@ class App extends Component {
         <div>
           <div>
             <div>
-              <Link to="/">Home</Link>
+              <button><Link to="/">Home</Link></button>
             </div>
             <div>
               <Link to="/login">LogIn</Link>
             </div>
             <div>
-              <Link to="/idea">Idea</Link>
+              <Link to="/idea">Art</Link>
             </div>
           </div>
           <Switch>

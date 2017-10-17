@@ -11,5 +11,10 @@ router.get('/artist', async (request, response) =>{
         response.send(error)
     }
 })
-
+router. get ('/artist/artistId' async(request, response =>{
+    try{
+        const artistId = await Artist.findByID(request.params.id)
+        res.json(user)
+    }
+}))
 module.exports = router

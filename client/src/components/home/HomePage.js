@@ -5,7 +5,7 @@ class HomePage extends Component {
     return (
       <div>
         <h1>Inktrest</h1>
-        
+        <h2>Helping Give inspiration for your next piece of skin art!</h2>
       </div>
     )
   }
