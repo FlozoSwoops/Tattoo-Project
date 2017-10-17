@@ -3,7 +3,7 @@ const router = express.Router()
 const {Artist } = require('../db/schema')
 
 
-router.get('/', async (request, response) =>{
+router.get('/artist', async (request, response) =>{
     try{
         const artists = await Artist.find({})
         response.json(artists)
