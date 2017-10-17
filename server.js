@@ -1,39 +1,47 @@
 // import variables
-
 require("dotenv").config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
-const ArtistController = require('./routes/ArtistController')
-mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true});
 
+//promise override 
+mongoose.Promise = global.Promise;
+
+
+//connect DB
+mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true});
 const connection = mongoose.connection;
+
 connection.on('connected', () => {
   console.log('Mongoose Connected Successfully');    
 }); 
 
-//controllers
 
+//Middleware
+app.use(express.static(__dirname + '/client/build/'));
+app.use(bodyParser.json());
+
+
+
+//controllers
+const ArtistController = require('./routes/ArtistController')
 app.use('/api/artists', ArtistController)
 
+app.use('/api/artists/artistId/art', ArtistController)
 
-app.use(express.static(__dirname + '/client/build/'));
-
-app.get('/', (req,res) => {
-	res.sendFile(__dirname + '/client/build/index.html')
-})
 
 // If the connection throws an error
-connection.on('error', (err) => {
-  console.log('Mongoose default connection error: ' + err);
+connection.on('error', (error) => {
+  console.log('Mongoose default connection error: ' + error);
 }); 
 
-app.use(bodyParser.json());
-app.get('/', (req,res) => {
-  res.send('Hello world!')
+
+//react app
+app.get('/', (request,response) => {
+	response.sendFile(__dirname + '/client/build/index.html')
 })
+
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
