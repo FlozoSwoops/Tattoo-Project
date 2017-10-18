@@ -4,15 +4,7 @@ import HomePage from './components/home/HomePage'
 import ArtistPage from './components/artist/ArtistPage'
 import LogInPage from './components/login/LoginPage'
 import styled from 'styled-components'
-// import img from './background.jpg';
 
-// const Content = styled.div`
-//     background-image: url(${img});
-//     width: 100%;
-//     height: 720px;
-//     background-size:cover;
-//     background-position: center;
-//     background-repeat: no-repeat;
 
 
 class App extends Component {
@@ -20,6 +12,7 @@ class App extends Component {
     return (
       <Router>
         <div>
+          
           <span className="nav">
 
             <button><Link to="/">Home</Link></button>
