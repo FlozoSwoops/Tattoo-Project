@@ -1,4 +1,9 @@
 import React, { Component } from 'react'
+import styled from 'styled-components'
+
+const ArtistStyle = styled.div`
+text-align: center;
+`
 
 class HomePage extends Component {
   render () {

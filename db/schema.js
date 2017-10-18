@@ -40,7 +40,10 @@ const artSchema =  Schema({
     description:{
         type: String,
         required: false
-    }
+    },
+    imageOne: String,
+    imageTwo: String,
+    imageThree: String,
 })
 
 const artistSchema =  Schema({
@@ -58,6 +61,10 @@ const artistSchema =  Schema({
     },
     yearsExperience:{
         type: Number,
+        required: true
+    },
+    pic:{
+        type: String, 
         required: true
     },
     artwork: [artSchema]

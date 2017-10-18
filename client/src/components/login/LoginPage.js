@@ -1,31 +1,37 @@
-// import React, { Component } from 'react'
-// import { Redirect } from 'react-router-dom'
-// import axios from 'axios'
+import React, { Component } from 'react'
+import { Redirect, Link } from 'react-router-dom'
+import axios from 'axios'
 
-// class Login extends Component {
+class Login extends Component {
 
-//     state = {
-//         users: []
-//     }
+    state = {
+        users: []
+    }
 
-//     getAllUser = () => {
-//         axios.get('localhost:3001/api/artist').then(response => {
-//             this.setState({ users: response.data })
-//         })
-//     }
+    getAllUser = () => {
+        axios.get('localhost:3001/api/user').then(response => {
+            this.setState({ users: response.data })
+        })
+    }
 
-//     render() {
-//         return (
-//             <div>
-//                 <h1>Log-In</h1>
-//                 <h3>Please Select a User</h3>
-//                 {this.state.users.map(artist => {
-//                     return (<Link to={`/user/${user._id}`}>{user.userName}</Link>)
+    render() {
+        return (
+            <div>
+                <form>
+                <h3>Log-In</h3>
+                <label>Username</label>
+                <input type="text"  onChange={this.handleChange} default="Mark"/>
+                <label>Password</label>
+                <input type="text"/>
+                <button>Submit</button>
 
-//                 })}
-//             </div>
-//         )
-//     }
-// }
 
-// export default LogIn
+                </form>
+
+                
+            </div>
+        )
+    }
+}
+
+export default Login

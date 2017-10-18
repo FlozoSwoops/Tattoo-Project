@@ -17,7 +17,10 @@ const phoenix = new ArtModel({
     totalTime: 48,
     numberSessions: 24,
     color: true,
-    description:"A Phoenix as the centerpiece of a traditional irezumi."
+    description:"A Phoenix as the centerpiece of a traditional irezumi.",
+    imageOne:"https://i.imgur.com/IN2uqQG.jpg",
+    imageTwo:"https://i.imgur.com/suWgvzS.jpg",
+    imageThree:"https://i.imgur.com/QdhGw8K.jpg",
 })
 
 const Sena = new ArtistModel ({
@@ -25,6 +28,7 @@ const Sena = new ArtistModel ({
     age: 35,
     location: " NYC",
     yearsExperience: 12,
+    pic: "https://imgur.com/a/etV4Z"
 })
 
 
