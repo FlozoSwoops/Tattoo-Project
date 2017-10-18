@@ -1,20 +1,22 @@
 const express = require('express')
 const router = express.Router()
-const {Artist } = require('../db/schema')
+const {ArtistModel } = require('../db/schema')
 
 
-router.get('/artist', async (request, response) =>{
+router.get('/', async (request, response) =>{
     try{
-        const artists = await Artist.find({})
+        const artists = await ArtistModel.find({})
         response.json(artists)
     } catch (error){
         response.send(error)
     }
 })
-router.get ('/artist/artistId' async(request, response =>{
+router.get ('/:id', async (request, response) =>{
     try{
-        const artistId = await Artist.findByID(request.params.id)
-        res.json(user)
+        const artist = await ArtistModel.findById(request.params.id)
+        res.json(artist)
+    } catch (error) {
+        console.log(error)
     }
-}))
+})
 module.exports = router

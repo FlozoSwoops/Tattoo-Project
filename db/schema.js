@@ -29,21 +29,18 @@ const artSchema =  Schema({
         type: Number,
         required: true,
     },
-    numSessions:{
+    numberSessions:{
         type: Number,
         required: true
     },
-    color:{
-        type: Boolean,
-        required: true
-    },
+    
     description:{
         type: String,
         required: false
     },
     imageOne: String,
     imageTwo: String,
-    imageThree: String,
+    imageThree: String
 })
 
 const artistSchema =  Schema({

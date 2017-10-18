@@ -28,7 +28,7 @@ app.use(bodyParser.json());
 const ArtistController = require('./routes/ArtistController')
 app.use('/api/artists', ArtistController)
 
-app.use('/api/artists/artistId/art', ArtistController)
+// app.use('/api/artists/artistId/art', ArtistController)
 
 
 // If the connection throws an error

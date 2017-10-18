@@ -16,11 +16,10 @@ const phoenix = new ArtModel({
     style: "Irezumi",
     totalTime: 48,
     numberSessions: 24,
-    color: true,
-    description:"A Phoenix as the centerpiece of a traditional irezumi.",
-    imageOne:"https://i.imgur.com/IN2uqQG.jpg",
-    imageTwo:"https://i.imgur.com/suWgvzS.jpg",
-    imageThree:"https://i.imgur.com/QdhGw8K.jpg",
+    description: "A Phoenix as the centerpiece of a traditional irezumi.",
+    imageOne: "https://i.imgur.com/IN2uqQG.jpg",
+    imageTwo: "https://i.imgur.com/suWgvzS.jpg",
+    imageThree: "https://i.imgur.com/QdhGw8K.jpg"
 })
 
 const Sena = new ArtistModel ({
@@ -28,7 +27,8 @@ const Sena = new ArtistModel ({
     age: 35,
     location: " NYC",
     yearsExperience: 12,
-    pic: "https://imgur.com/a/etV4Z"
+    pic: "https://imgur.com/a/etV4Z",
+    artwork: [phoenix]
 })
 
 
@@ -37,3 +37,4 @@ ArtistModel.remove({})
     .then(() => Sena.save())
     .then(() => console.log('Saved'))
     .then(() => mongoose.connection.close())
+    
