@@ -11,33 +11,38 @@ text-align: center;
 
 class Artist extends Component {
 
-    
-    state = {
+    state= {
         artists: []
     }
 
-    getAllArtist = () => {
-        axios.get('localhost:3001/api/artist').then(response => {
-            this.setState({ artists: response.data })
-        })
+    componentWillMount() {
+        this.getAllArtists()
     }
 
+    getAllArtists = async () => {
+        try {
+            const res = await axios.get('/api/artists')
+            this.setState({ artists: res.data })
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+
     render() {
+
         return (
-            <ArtistStyle>
+
             <div>
-                <h3>Please Select an artist</h3>
-                <h5><a href="/artist/:artistId">David Sena</a></h5>
-                <h5><a href="/artist/:horiyoshiId">Horiyoshi III</a></h5>
+                <h2> Select Artist</h2>
+                {this.state.artists.map((artist) => {
+                    return (<Link key={artist._id} to={`/artist/${artist._id}`}>{artist.name}</Link>)
 
-                {/* {this.state.artists.map(artist => {
-                    return (<Link to={`/artist/${artist._id}`}>{artist.name}</Link>)
 
-                })} */}
+
+                })}
             </div>
-            </ArtistStyle>
         )
     }
 }
-
 export default Artist

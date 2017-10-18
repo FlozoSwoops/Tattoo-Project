@@ -11,6 +11,7 @@ const Content = styled.div`
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
+    color: white;
 `
 
 class Login extends Component {
@@ -27,6 +28,7 @@ class Login extends Component {
 
     render() {
         return (
+            <Content>
             <div>
                 <form>
                 <h3>Log-In</h3>
@@ -41,6 +43,7 @@ class Login extends Component {
 
                 
             </div>
+            </Content>
         )
     }
 }

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import HomePage from './components/home/HomePage'
 import ArtistPage from './components/artist/ArtistPage'
 import LogInPage from './components/login/LoginPage'
+import ArtPage from './components/artist/ArtPage'
 import styled from 'styled-components'
 
 
@@ -27,6 +28,7 @@ class App extends Component {
             <Route exact path="/" component={HomePage} />
             <Route exact path="/login" component={LogInPage} />
             <Route exact path="/artist" component={ArtistPage} />
+            <Route exact path="/artist/:id" component = {ArtPage} />
           </Switch>
         </div>
       </Router>

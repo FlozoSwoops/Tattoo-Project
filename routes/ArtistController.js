@@ -14,7 +14,8 @@ router.get('/', async (request, response) =>{
 router.get ('/:id', async (request, response) =>{
     try{
         const artist = await ArtistModel.findById(request.params.id)
-        res.json(artist)
+        console.log(artist)
+        response.json(artist)
     } catch (error) {
         console.log(error)
     }
