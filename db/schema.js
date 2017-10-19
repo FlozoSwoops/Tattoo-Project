@@ -54,7 +54,7 @@ const artistSchema =  Schema({
     },
     location:{
         type: String,
-        required: true
+        required: false
     },
     yearsExperience:{
         type: Number,

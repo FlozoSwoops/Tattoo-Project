@@ -29,20 +29,20 @@ class Login extends Component {
     render() {
         return (
             <Content>
-            <div>
-                <form>
-                <h3>Log-In</h3>
-                <label>Username</label>
-                <input type="text"  onChange={this.handleChange} default="Mark"/>
-                <label>Password</label>
-                <input type="text"/>
-                <button>Submit</button>
+                <div>
+                    <form>
+                        <h3>Log-In</h3>
+                        <label>Username</label>
+                        <input type="text" onChange={this.handleChange} default="Mark" />
+                        <label>Password</label>
+                        <input type="text" />
+                        <button>Submit</button>
 
 
-                </form>
+                    </form>
 
-                
-            </div>
+
+                </div>
             </Content>
         )
     }

@@ -21,14 +21,14 @@ router.get ('/:id', async (request, response) =>{
     }
 })
 
-
 router.post('/', async (request, response) => {
     try {
-      const newArtist = new ArtistModel(req.body.artist)
+     console.log(request.body.artist)
+      const newArtist = new ArtistModel(request.body.artist)
       const saved = await newArtist.save()
-      res.json(saved)
+      response.json(saved)
     } catch (err) {
-      res.send(err)
+      response.send(err)
     }
   })
 

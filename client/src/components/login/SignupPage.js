@@ -15,9 +15,9 @@ const Content = styled.div`
 
 
 createUser = () => {
-    axios.post('/api/users', {
-      user: this.state.user
-    }).then((res) => {
-      this.setState({redirectToHome: true, createdUser: res.data})
-    })
-  }
+  axios.post('/api/users', {
+    user: this.state.user
+  }).then((res) => {
+    this.setState({ redirectToHome: true, createdUser: res.data })
+  })
+}

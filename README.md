@@ -1,4 +1,18 @@
 # Tattoo-Project
+An social app to help inspire new projects and get feedback on past artwork. 
+
+
+Technology used:
+React
+Express
+MongoDB
+
+Components to add:
+A rating feature, as well as comment feature
+
+Bugs:
+Adding new Artist
+Adding new 
 
 ERD:
 

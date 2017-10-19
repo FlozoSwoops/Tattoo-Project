@@ -1,8 +1,21 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import styled from 'styled-components'
+import img from '../../22j.jpg';
+
+const Content = styled.div`
+    background-image: url(${img});
+    width: 100%;
+    height: 900px;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+`
 
 class ArtPage extends Component {
-    state= {
+    state = {
         artists: []
     }
 
@@ -20,11 +33,13 @@ class ArtPage extends Component {
     }
     render() {
         return (
-            <div>
-                {/* <h1>This is the art page</h1> */}
+            <Content>
+                <div>
+                    <h1>This is the art page</h1>
 
-                
-            </div>
+                    <img src="" alt="" />
+                </div>
+            </ Content>
         );
     }
 }

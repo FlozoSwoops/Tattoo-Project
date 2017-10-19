@@ -18,13 +18,13 @@ text-align: center;
 `
 
 class HomePage extends Component {
-  render () {
+  render() {
     return (
       <Content>
-      <div>
-        <h1>Inktrest</h1>
-        <h2>Helping Give inspiration for your next piece of skin art!</h2>
-      </div>
+        <div>
+          <h1>Inktrest</h1>
+          <h2>Helping Give inspiration for your next piece of skin art!</h2>
+        </div>
       </Content>
     )
   }
