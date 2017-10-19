@@ -50,7 +50,7 @@ class Artist extends Component {
                 <div>
                     <h2> Select Artist</h2>
                     {this.state.artists.map((artist) => {
-                        return (<Link key={artist._id} to={`/artist/${artist._id}`}>{artist.name}</Link>)
+                        return (<button><Link key={artist._id} to={`/artist/${artist._id}`}>{artist.name}</Link></ button>)
 
 
 

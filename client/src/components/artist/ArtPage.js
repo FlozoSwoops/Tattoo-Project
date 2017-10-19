@@ -38,6 +38,7 @@ class ArtPage extends Component {
                     <h1>This is the art page</h1>
 
                     <img src="" alt="" />
+                    <button>Delete Artist</button>
                 </div>
             </ Content>
         );
