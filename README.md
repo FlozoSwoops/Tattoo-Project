@@ -11,39 +11,11 @@ Components to add:
 A rating feature, as well as comment feature
 
 Bugs:
-Adding new Artist
-Adding new 
+Adding new Art
+Adding Ratings to pics
 
 ERD:
-
-user
-name:
-age:
-location:
-Number of Tattoos
- |
- |
- |
- |
-Artist
-name:
-awards:
-age:
-location:
-Years working:
-
- |
- |
- |
- |
-/|\
-Art
-time:
-number sessions:
-hours:
-color:
-likes:
-dislikes:
+https://imgur.com/a/0qzf0
 
 Wireframe
 https://gomockingbird.com/projects/585q5mg/4gXVnC
