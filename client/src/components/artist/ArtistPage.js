@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Redirect, Link } from 'react-router-dom'
 import axios from 'axios'
 import styled from 'styled-components'
+import AddArtistPage from './AddArtistPage'
 
 const ArtistStyle = styled.div`
 text-align: center;
@@ -41,6 +42,7 @@ class Artist extends Component {
 
 
                 })}
+                <AddArtistPage />
             </div>
         )
     }

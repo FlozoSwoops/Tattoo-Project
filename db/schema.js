@@ -58,11 +58,11 @@ const artistSchema =  Schema({
     },
     yearsExperience:{
         type: Number,
-        required: true
+        required: false
     },
     pic:{
         type: String, 
-        required: true
+        required: false
     },
     artwork: [artSchema]
 })

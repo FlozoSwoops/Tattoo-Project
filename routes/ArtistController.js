@@ -20,4 +20,22 @@ router.get ('/:id', async (request, response) =>{
         console.log(error)
     }
 })
+
+
+router.post('/', async (request, response) => {
+    try {
+      const newArtist = new ArtistModel(req.body.artist)
+      const saved = await newArtist.save()
+      res.json(saved)
+    } catch (err) {
+      res.send(err)
+    }
+  })
+
+  router.delete('/', async(request, response) => {
+      const user = await user.findById(request.params.userId)
+      artist.id(request.params.id).remove()
+      const saved = await user.save()
+      res.json(saved)
+  })
 module.exports = router
