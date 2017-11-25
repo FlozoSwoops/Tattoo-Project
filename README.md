@@ -24,5 +24,4 @@ Trello
 https://trello.com/b/ofwD8gAE/tattoo-project
 
 Heroku 
-https://damp-spire-92814.herokuapp.com/
-
+ 

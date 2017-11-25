@@ -5,6 +5,7 @@ import ArtistPage from './components/artist/ArtistPage'
 import LogInPage from './components/login/LoginPage'
 import ArtPage from './components/artist/ArtPage'
 import styled from 'styled-components'
+import Nav from './components/Nav'
 
 
 
@@ -13,17 +14,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          
-          <span className="nav">
-
-            <button><Link to="/">Home</Link></button>
-
-
-            <button><Link to="/login">LogIn</Link></button>
-
-            <button><Link to="/artist">Art</Link>
-            </button>
-          </span>
+       <Nav />
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/login" component={LogInPage} />

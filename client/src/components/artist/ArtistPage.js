@@ -3,10 +3,8 @@ import { Redirect, Link } from 'react-router-dom'
 import axios from 'axios'
 import styled from 'styled-components'
 import AddArtistPage from './AddArtistPage'
-import img from '../../background1.jpg';
 
 const Content = styled.div`
-    background-image: url(${img});
     width: 100%;
     height: 1000px;
     background-size:cover;
@@ -26,39 +24,42 @@ text-align: center;
 class Artist extends Component {
 
     state = {
-        artists: []
+        artists: [],
+        showForm: false
     }
 
-    componentWillMount() {
-        this.getAllArtists()
-    }
-
-    getAllArtists = async () => {
-        try {
-            const res = await axios.get('/api/artists')
-            this.setState({ artists: res.data })
-        } catch (err) {
-            console.log(err)
+    async componentWillMount() {
+        try{
+        const response = await axios.get('/api/artists')
+        this.setState({ artists: response.data })
+        } catch (error) {
+        conole.log(error)
         }
+    }
+
+    toggleForm = () => {
+        this.setState({ showForm : !this.state.showform})
     }
 
 
     render() {
-
         return (
-            <Content>
-                <div>
-                    <h2> Select Artist</h2>
-                    {this.state.artists.map((artist) => {
-                        return (<button><Link key={artist._id} to={`/artist/${artist._id}`}>{artist.name}</Link></ button>)
+         
+                    
+                
+            {this.state.artists.map((artist) => {
+                return (<img src={artist.pic}/>
+                <Link to={`/artist/${artist._id}`}>{artist.name}</Link>)
+            })}
+                    {/* <div>
+                    {this.state.showForm ? <AddArtistPage  /> : <button onClick={this.toggleForm}>Add Artist</button>}
 
+                    {this.state.showForm ? <button onClick={this.toggleForm}>Close Form</button> : ''}
+                    </div> */}
 
-
-                    })}
-                    <AddArtistPage />
-                </div>
-            </Content>
-        )
+                  
+            
+        ) 
     }
 }
 export default Artist

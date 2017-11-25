@@ -4,39 +4,31 @@ const Schema= mongoose.Schema
 const userSchema =  Schema ({
     name:{
         type: String,
-        required: true,
     },
     age: {
         type: Number,
-        required: false,
     },
     location: {
         type: String,
-        required: false,
     },
     numberOfTattos: {
         type: String,
-        required: true
     }
 })
 
 const artSchema =  Schema({
     style:{
         type: String,
-        required: true,
     },
     totalTime:{
         type: Number,
-        required: true,
     },
     numberSessions:{
         type: Number,
-        required: true
     },
     
     description:{
         type: String,
-        required: false
     },
     imageOne: String,
     imageTwo: String,
