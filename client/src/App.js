@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import HomePage from './components/home/HomePage'
 import ArtistPage from './components/artist/ArtistPage'
 import LogInPage from './components/login/LoginPage'
-import ArtPage from './components/artist/ArtPage'
+import ArtPage from './components/art/ArtPage'
 import styled from 'styled-components'
 import Nav from './components/Nav'
 

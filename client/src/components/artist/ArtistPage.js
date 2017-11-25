@@ -33,7 +33,7 @@ class Artist extends Component {
         const response = await axios.get('/api/artists')
         this.setState({ artists: response.data })
         } catch (error) {
-        conole.log(error)
+        console.log(error)
         }
     }
 
@@ -47,15 +47,19 @@ class Artist extends Component {
          
                     
                 
-            {this.state.artists.map((artist) => {
-                return (<img src={artist.pic}/>
-                <Link to={`/artist/${artist._id}`}>{artist.name}</Link>)
-            })}
-                    {/* <div>
+            // {this.state.artists.map((artist) => {
+            //     return (
+            //         <div>
+            //     <img src={artist.pic}/>
+            //     <Link to={`/artist/${artist._id}`}>{artist.name}</Link>
+            //     </div>
+            //     )
+            // })}
+                    <div>
                     {this.state.showForm ? <AddArtistPage  /> : <button onClick={this.toggleForm}>Add Artist</button>}
 
                     {this.state.showForm ? <button onClick={this.toggleForm}>Close Form</button> : ''}
-                    </div> */}
+                    </div>  
 
                   
             
@@ -63,3 +67,4 @@ class Artist extends Component {
     }
 }
 export default Artist
+
